@@ -164,7 +164,10 @@ public final class PickFolderActivity extends Activity {
             buttons.setOrientation(LinearLayout.VERTICAL);
             buttons.setPadding(gap, 0, 0, 0);
             for (Button button : new Button[] {useFolder, newFolder, cancel}) {
-                buttons.addView(button, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                LinearLayout.LayoutParams params =
+                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.bottomMargin = gap / 2;
+                buttons.addView(button, params);
             }
             browser.addView(buttons, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT));
         } else {
