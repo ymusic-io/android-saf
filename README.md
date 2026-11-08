@@ -11,13 +11,17 @@ A tiny helper app that gives [YMusic](https://github.com/ymusic-io/YMusicV4) a f
 
 ## Release
 
-`versionCode` may go up with any change; `versionName` changes only when the maintainer decides on a release. To release, set both in `build.gradle.kts`, then push a `v<versionName>` tag. The Release workflow signs the APK with YMusic's release key — taken from YMusicV4's sealed `secrets.enc`, so this repo needs the same `SECRETS_PASSPHRASE` secret as YMusicV4 — and publishes `android-saf.apk` as the latest release, which is what the download link points to.
+`versionCode` may go up with any change; `versionName` changes only when the maintainer decides on a release. To release, set both in `build.gradle.kts`, then push a `release-v<versionName>` tag. The Release workflow restores `secrets.enc` with the `SECRETS_PASSPHRASE` secret, builds the APK signed with YMusic's release key, and publishes `android-saf.apk` as the latest release, which is what the download link points to. A tagged run without the secret fails rather than publish an APK YMusic would reject.
+
+## Secrets
+
+`secrets.enc` (committed) seals `secrets.properties` and `signing/release.p12` — YMusic's release key and nothing else; see `secrets.properties.example`. `./decrypt.sh` restores them (from `SECRETS_PASSPHRASE` when set, else it prompts); after changing them, `./encrypt.sh` seals them again. Both scripts are copies of YMusicV4's.
 
 ## Build locally
 
 ```
 ./gradlew assembleDebug     # debug-signed: pairs with a debug YMusic build from the same machine
-./gradlew assembleRelease   # signed with YMUSIC_ANDROID_STORE_FILE / _STORE_PASSWORD / _KEY_ALIAS / _KEY_PASSWORD, else debug-signed
+./gradlew assembleRelease   # signed with YMusic's key once ./decrypt.sh has run (or env YMUSIC_ANDROID_*), else debug-signed
 ```
 
 Keep the AGP version in `build.gradle.kts` in step with YMusicV4's `Versions.agp`.
