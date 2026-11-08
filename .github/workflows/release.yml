@@ -48,7 +48,8 @@ jobs:
         run: |
           ./gradlew --no-daemon assembleRelease
           cp build/outputs/apk/release/android-saf-release.apk "$RUNNER_TEMP/android-saf.apk"
-          "$ANDROID_HOME"/build-tools/*/apksigner verify --print-certs "$RUNNER_TEMP/android-saf.apk" | grep -i "SHA-256"
+          apksigner=$(ls -d "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n 1)
+          "$apksigner" verify --print-certs "$RUNNER_TEMP/android-saf.apk" | grep -i "SHA-256"
 
       - name: Discard secrets
         if: always()
