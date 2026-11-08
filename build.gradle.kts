@@ -15,7 +15,7 @@ android {
         versionName = "1.0"
     }
 
-    // YMusic builds pass its own release key here: the picker grants folders only to apps signed like itself.
+    // YMusic's release key (the Release workflow passes it): the picker answers only apps signed like itself.
     val releaseSigning = System.getenv("YMUSIC_ANDROID_STORE_FILE")?.takeIf { file(it).isFile }?.let { path ->
         signingConfigs.create("release") {
             storeFile = file(path)
