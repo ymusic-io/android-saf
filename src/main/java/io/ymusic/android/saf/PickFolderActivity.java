@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -50,6 +51,7 @@ public final class PickFolderActivity extends Activity {
     private ListView list;
     private Button useFolder;
     private Button newFolder;
+    private Button cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,43 +119,62 @@ public final class PickFolderActivity extends Activity {
         screen.addView(access, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
         accessPane = access;
 
+        // Wide screens (TV, landscape) stack the actions right of the list: on a D-pad, Right from any row reaches
+        // them, where a bar below the list is only reachable after its last row.
+        boolean wide = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
         LinearLayout browser = new LinearLayout(this);
-        browser.setOrientation(LinearLayout.VERTICAL);
+        browser.setOrientation(wide ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
+        LinearLayout listing = new LinearLayout(this);
+        listing.setOrientation(LinearLayout.VERTICAL);
         path = new TextView(this);
         path.setSingleLine(true);
         path.setEllipsize(TextUtils.TruncateAt.START);
         path.setTextAppearance(android.R.style.TextAppearance_DeviceDefault_Small);
-        browser.addView(path);
+        listing.addView(path);
         list = new ListView(this);
         rows = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>());
         list.setAdapter(rows);
         list.setOnItemClickListener((parent, view, position, id) -> show(rowTargets.get(position)));
-        browser.addView(list, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
+        listing.addView(list, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
         TextView empty = new TextView(this);
         empty.setText(R.string.empty);
         empty.setPadding(0, gap, 0, gap);
-        browser.addView(empty);
+        listing.addView(empty);
         list.setEmptyView(empty);
+        browser.addView(listing, wide
+            ? new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f)
+            : new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
 
-        LinearLayout buttons = new LinearLayout(this);
-        buttons.setGravity(Gravity.CENTER_VERTICAL);
         newFolder = new Button(this, null, android.R.attr.buttonBarButtonStyle);
         newFolder.setText(R.string.new_folder);
         newFolder.setOnClickListener(view -> askNewFolder());
-        buttons.addView(newFolder);
-        buttons.addView(new View(this), new LinearLayout.LayoutParams(0, 0, 1f));
-        Button cancel = new Button(this, null, android.R.attr.buttonBarButtonStyle);
+        cancel = new Button(this, null, android.R.attr.buttonBarButtonStyle);
         cancel.setText(android.R.string.cancel);
         cancel.setOnClickListener(view -> {
             setResult(RESULT_CANCELED);
             finish();
         });
-        buttons.addView(cancel);
         useFolder = new Button(this, null, android.R.attr.buttonBarButtonStyle);
         useFolder.setText(R.string.use_folder);
         useFolder.setOnClickListener(view -> pick());
-        buttons.addView(useFolder);
-        browser.addView(buttons);
+        for (Button button : new Button[] {useFolder, newFolder, cancel}) button.setId(View.generateViewId());
+
+        LinearLayout buttons = new LinearLayout(this);
+        if (wide) {
+            buttons.setOrientation(LinearLayout.VERTICAL);
+            buttons.setPadding(gap, 0, 0, 0);
+            for (Button button : new Button[] {useFolder, newFolder, cancel}) {
+                buttons.addView(button, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            }
+            browser.addView(buttons, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT));
+        } else {
+            buttons.setGravity(Gravity.CENTER_VERTICAL);
+            buttons.addView(newFolder);
+            buttons.addView(new View(this), new LinearLayout.LayoutParams(0, 0, 1f));
+            buttons.addView(cancel);
+            buttons.addView(useFolder);
+            browser.addView(buttons);
+        }
         screen.addView(browser, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
         browserPane = browser;
         return screen;
@@ -193,6 +214,9 @@ public final class PickFolderActivity extends Activity {
         list.requestFocus();
         useFolder.setEnabled(dir != null);
         newFolder.setEnabled(dir != null && dir.canWrite());
+        // Right from the list goes to the first enabled action: a disabled target would swallow the key.
+        Button right = useFolder.isEnabled() ? useFolder : newFolder.isEnabled() ? newFolder : cancel;
+        list.setNextFocusRightId(right.getId());
     }
 
     private void askNewFolder() {
