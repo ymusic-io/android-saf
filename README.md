@@ -11,7 +11,7 @@ A tiny helper app that gives [YMusic](https://github.com/ymusic-io/YMusicV4) a f
 
 ## Release
 
-The version stays put between releases: bump `versionCode` and `versionName` in `build.gradle.kts` only when releasing, then push a `v<versionName>` tag. The Release workflow signs the APK with YMusic's release key — taken from YMusicV4's sealed `secrets.enc`, so this repo needs the same `SECRETS_PASSPHRASE` secret as YMusicV4 — and publishes `android-saf.apk` as the latest release, which is what the download link points to.
+`versionCode` may go up with any change; `versionName` changes only when the maintainer decides on a release. To release, set both in `build.gradle.kts`, then push a `v<versionName>` tag. The Release workflow signs the APK with YMusic's release key — taken from YMusicV4's sealed `secrets.enc`, so this repo needs the same `SECRETS_PASSPHRASE` secret as YMusicV4 — and publishes `android-saf.apk` as the latest release, which is what the download link points to.
 
 ## Build locally
 
