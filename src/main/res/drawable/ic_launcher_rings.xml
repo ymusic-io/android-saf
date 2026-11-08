@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- YMusic's own icon background (androidApp ic_launcher_rings): the helper reads as part of YMusic.
-     Clipped to the square, not the disc: the launcher mask (squircle / circle) is the shape. -->
+<!-- Same concentric-ring geometry as ymusic_logo, sitting in the adaptive-icon
+     safe zone (1024 art on a 1536 canvas = inner 72 of 108 dp). Clipped to the
+     square, not the disc: the launcher mask (squircle / circle) is the shape. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"

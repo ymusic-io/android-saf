@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- A folder holding YMusic's play glyph, inside the adaptive-icon safe zone (66 of 108 dp). -->
+<!-- Play glyph from ymusic_logo.xml, placed with the ring background in the
+     adaptive-icon safe zone (1024 art on a 1536 canvas = inner 72 of 108 dp). -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="1536"
     android:viewportHeight="1536">
     <group
-        android:pivotX="768"
-        android:pivotY="768"
-        android:scaleX="0.86"
-        android:scaleY="0.86">
+        android:translateX="256"
+        android:translateY="256">
         <path
-            android:pathData="M464,468 L652,468 Q676,468 692,486 L728,528 L1072,528 Q1128,528 1128,584 L1128,1012 Q1128,1068 1072,1068 L464,1068 Q408,1068 408,1012 L408,524 Q408,468 464,468 Z"
+            android:pathData="M366.92,382.68 Q366.92,277.28 461.19,324.4 L742.11,464.86 Q836.38,512 742.11,559.14 L461.19,699.6 Q366.92,746.72 366.92,641.32 Z"
             android:fillColor="#FFFFFF" />
-        <group
-            android:translateX="443.7"
-            android:translateY="480.6"
-            android:scaleX="0.62"
-            android:scaleY="0.62">
-            <path
-                android:pathData="M366.92,382.68 Q366.92,277.28 461.19,324.4 L742.11,464.86 Q836.38,512 742.11,559.14 L461.19,699.6 Q366.92,746.72 366.92,641.32 Z"
-                android:fillColor="#267C4E" />
-        </group>
     </group>
 </vector>
