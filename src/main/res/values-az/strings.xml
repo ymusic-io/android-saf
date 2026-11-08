@@ -5,4 +5,8 @@
     <string name="empty">Burada qovluq yoxdur</string>
     <string name="open_settings">Ayarları aç</string>
     <string name="access_message">YMusic-in seçdiyiniz qovluqlardan istifadə edə bilməsi üçün YMusic Files-a bütün fayllara giriş icazəsi verin.</string>
+    <string name="new_folder">Yeni qovluq</string>
+    <string name="folder_name">Qovluq adı</string>
+    <string name="create">Yarat</string>
+    <string name="create_failed">Qovluq yaradıla bilmədi</string>
 </resources>

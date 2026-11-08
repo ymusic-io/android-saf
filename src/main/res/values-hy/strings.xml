@@ -5,4 +5,8 @@
     <string name="empty">Այստեղ թղթապանակներ չկան</string>
     <string name="open_settings">Բացել կարգավորումները</string>
     <string name="access_message">Թույլատրեք YMusic Files-ին մուտք գործել բոլոր ֆայլեր, որպեսզի YMusic-ը կարողանա օգտագործել ձեր ընտրած թղթապանակները։</string>
+    <string name="new_folder">Նոր թղթապանակ</string>
+    <string name="folder_name">Թղթապանակի անունը</string>
+    <string name="create">Ստեղծել</string>
+    <string name="create_failed">Չհաջողվեց ստեղծել թղթապանակը</string>
 </resources>

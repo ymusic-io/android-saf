@@ -5,4 +5,8 @@
     <string name="empty">यहाँ कुनै फोल्डर छैन</string>
     <string name="open_settings">सेटिङ खोल्नुहोस्</string>
     <string name="access_message">तपाईंले छान्नुभएका फोल्डरहरू YMusic ले प्रयोग गर्न सकोस् भनेर YMusic Files लाई सबै फाइलहरूको पहुँच दिनुहोस्।</string>
+    <string name="new_folder">नयाँ फोल्डर</string>
+    <string name="folder_name">फोल्डरको नाम</string>
+    <string name="create">बनाउनुहोस्</string>
+    <string name="create_failed">फोल्डर बनाउन सकिएन</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Không có thư mục nào</string>
     <string name="open_settings">Mở cài đặt</string>
     <string name="access_message">Hãy cho phép YMusic Files truy cập mọi tệp để YMusic dùng được các thư mục bạn chọn.</string>
+    <string name="new_folder">Thư mục mới</string>
+    <string name="folder_name">Tên thư mục</string>
+    <string name="create">Tạo</string>
+    <string name="create_failed">Không tạo được thư mục</string>
 </resources>

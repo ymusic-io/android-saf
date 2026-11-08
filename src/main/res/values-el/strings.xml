@@ -5,4 +5,8 @@
     <string name="empty">Δεν υπάρχουν φάκελοι εδώ</string>
     <string name="open_settings">Άνοιγμα ρυθμίσεων</string>
     <string name="access_message">Επιτρέψτε στο YMusic Files την πρόσβαση σε όλα τα αρχεία, ώστε το YMusic να χρησιμοποιεί τους φακέλους που επιλέγετε.</string>
+    <string name="new_folder">Νέος φάκελος</string>
+    <string name="folder_name">Όνομα φακέλου</string>
+    <string name="create">Δημιουργία</string>
+    <string name="create_failed">Δεν ήταν δυνατή η δημιουργία του φακέλου</string>
 </resources>

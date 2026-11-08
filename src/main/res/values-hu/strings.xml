@@ -5,4 +5,8 @@
     <string name="empty">Itt nincsenek mappák</string>
     <string name="open_settings">Beállítások megnyitása</string>
     <string name="access_message">Engedélyezd a YMusic Files számára az összes fájlhoz való hozzáférést, hogy a YMusic használhassa a kiválasztott mappákat.</string>
+    <string name="new_folder">Új mappa</string>
+    <string name="folder_name">Mappa neve</string>
+    <string name="create">Létrehozás</string>
+    <string name="create_failed">Nem sikerült létrehozni a mappát</string>
 </resources>

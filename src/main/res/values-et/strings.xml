@@ -5,4 +5,8 @@
     <string name="empty">Siin pole kaustu</string>
     <string name="open_settings">Ava seaded</string>
     <string name="access_message">Luba YMusic Filesil kõigile failidele juurde pääseda, et YMusic saaks kasutada sinu valitud kaustu.</string>
+    <string name="new_folder">Uus kaust</string>
+    <string name="folder_name">Kausta nimi</string>
+    <string name="create">Loo</string>
+    <string name="create_failed">Kausta ei saanud luua</string>
 </resources>

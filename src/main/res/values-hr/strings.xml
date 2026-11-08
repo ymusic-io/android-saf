@@ -5,4 +5,8 @@
     <string name="empty">Ovdje nema mapa</string>
     <string name="open_settings">Otvori postavke</string>
     <string name="access_message">Dopustite aplikaciji YMusic Files pristup svim datotekama kako bi YMusic mogao koristiti mape koje odaberete.</string>
+    <string name="new_folder">Nova mapa</string>
+    <string name="folder_name">Naziv mape</string>
+    <string name="create">Izradi</string>
+    <string name="create_failed">Mapu nije moguće izraditi</string>
 </resources>

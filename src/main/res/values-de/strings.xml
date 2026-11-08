@@ -5,4 +5,8 @@
     <string name="empty">Keine Ordner vorhanden</string>
     <string name="open_settings">Einstellungen öffnen</string>
     <string name="access_message">Erlaube YMusic Files den Zugriff auf alle Dateien, damit YMusic die von dir gewählten Ordner nutzen kann.</string>
+    <string name="new_folder">Neuer Ordner</string>
+    <string name="folder_name">Ordnername</string>
+    <string name="create">Erstellen</string>
+    <string name="create_failed">Der Ordner konnte nicht erstellt werden</string>
 </resources>

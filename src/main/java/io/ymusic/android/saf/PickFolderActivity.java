@@ -1,6 +1,7 @@
 package io.ymusic.android.saf;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,9 +17,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -45,6 +49,7 @@ public final class PickFolderActivity extends Activity {
     private TextView path;
     private ListView list;
     private Button useFolder;
+    private Button newFolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +136,12 @@ public final class PickFolderActivity extends Activity {
         list.setEmptyView(empty);
 
         LinearLayout buttons = new LinearLayout(this);
-        buttons.setGravity(Gravity.END);
+        buttons.setGravity(Gravity.CENTER_VERTICAL);
+        newFolder = new Button(this, null, android.R.attr.buttonBarButtonStyle);
+        newFolder.setText(R.string.new_folder);
+        newFolder.setOnClickListener(view -> askNewFolder());
+        buttons.addView(newFolder);
+        buttons.addView(new View(this), new LinearLayout.LayoutParams(0, 0, 1f));
         Button cancel = new Button(this, null, android.R.attr.buttonBarButtonStyle);
         cancel.setText(android.R.string.cancel);
         cancel.setOnClickListener(view -> {
@@ -182,6 +192,40 @@ public final class PickFolderActivity extends Activity {
         // The clicked row leaves with the listing it was in; on a D-pad focus must land on the new one.
         list.requestFocus();
         useFolder.setEnabled(dir != null);
+        newFolder.setEnabled(dir != null && dir.canWrite());
+    }
+
+    private void askNewFolder() {
+        File parent = current;
+        if (parent == null) return;
+        EditText name = new EditText(this);
+        name.setSingleLine(true);
+        name.setHint(R.string.folder_name);
+        FrameLayout frame = new FrameLayout(this);
+        int gap = Math.round(24 * getResources().getDisplayMetrics().density);
+        frame.setPadding(gap, 0, gap, 0);
+        frame.addView(name);
+        new AlertDialog.Builder(this)
+            .setTitle(R.string.new_folder)
+            .setView(frame)
+            .setPositiveButton(R.string.create, (dialog, which) -> createFolder(parent, name.getText().toString().trim()))
+            .setNegativeButton(android.R.string.cancel, null)
+            .show();
+        name.requestFocus();
+    }
+
+    /** Creates [name] in [parent] and opens it; an existing folder of that name just opens. */
+    private void createFolder(File parent, String name) {
+        if (name.isEmpty() || name.equals(".") || name.equals("..") || name.contains("/")) {
+            Toast.makeText(this, R.string.create_failed, Toast.LENGTH_LONG).show();
+            return;
+        }
+        File dir = new File(parent, name);
+        if (dir.isDirectory() || dir.mkdir()) {
+            show(dir);
+        } else {
+            Toast.makeText(this, R.string.create_failed, Toast.LENGTH_LONG).show();
+        }
     }
 
     private int rootIndexOf(File dir) {

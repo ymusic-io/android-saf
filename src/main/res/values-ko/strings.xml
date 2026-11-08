@@ -5,4 +5,8 @@
     <string name="empty">폴더가 없습니다</string>
     <string name="open_settings">설정 열기</string>
     <string name="access_message">YMusic이 선택한 폴더를 사용할 수 있도록 YMusic Files에 모든 파일 액세스를 허용하세요.</string>
+    <string name="new_folder">새 폴더</string>
+    <string name="folder_name">폴더 이름</string>
+    <string name="create">만들기</string>
+    <string name="create_failed">폴더를 만들 수 없습니다</string>
 </resources>

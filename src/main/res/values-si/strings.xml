@@ -5,4 +5,8 @@
     <string name="empty">මෙහි ෆෝල්ඩර නැත</string>
     <string name="open_settings">සැකසීම් විවෘත කරන්න</string>
     <string name="access_message">ඔබ තෝරන ෆෝල්ඩර YMusic හට භාවිත කිරීමට, YMusic Files හට සියලු ගොනු වෙත ප්‍රවේශය ඉඩ දෙන්න.</string>
+    <string name="new_folder">නව ෆෝල්ඩරය</string>
+    <string name="folder_name">ෆෝල්ඩරයේ නම</string>
+    <string name="create">සාදන්න</string>
+    <string name="create_failed">ෆෝල්ඩරය සෑදිය නොහැකි විය</string>
 </resources>

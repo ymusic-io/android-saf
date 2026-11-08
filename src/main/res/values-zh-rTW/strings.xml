@@ -5,4 +5,8 @@
     <string name="empty">這裡沒有資料夾</string>
     <string name="open_settings">開啟設定</string>
     <string name="access_message">請允許 YMusic Files 存取所有檔案，YMusic 才能使用你選擇的資料夾。</string>
+    <string name="new_folder">新增資料夾</string>
+    <string name="folder_name">資料夾名稱</string>
+    <string name="create">建立</string>
+    <string name="create_failed">無法建立資料夾</string>
 </resources>

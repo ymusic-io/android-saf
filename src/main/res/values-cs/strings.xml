@@ -5,4 +5,8 @@
     <string name="empty">Žádné složky</string>
     <string name="open_settings">Otevřít nastavení</string>
     <string name="access_message">Povolte aplikaci YMusic Files přístup ke všem souborům, aby YMusic mohl používat složky, které vyberete.</string>
+    <string name="new_folder">Nová složka</string>
+    <string name="folder_name">Název složky</string>
+    <string name="create">Vytvořit</string>
+    <string name="create_failed">Složku se nepodařilo vytvořit</string>
 </resources>

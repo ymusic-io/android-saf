@@ -5,4 +5,8 @@
     <string name="empty">フォルダがありません</string>
     <string name="open_settings">設定を開く</string>
     <string name="access_message">YMusic で選んだフォルダを使えるように、YMusic Files にすべてのファイルへのアクセスを許可してください。</string>
+    <string name="new_folder">新しいフォルダ</string>
+    <string name="folder_name">フォルダ名</string>
+    <string name="create">作成</string>
+    <string name="create_failed">フォルダを作成できませんでした</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Овде нема фасцикли</string>
     <string name="open_settings">Отвори подешавања</string>
     <string name="access_message">Дозволите апликацији YMusic Files приступ свим фајловима да би YMusic могао да користи фасцикле које изаберете.</string>
+    <string name="new_folder">Нова фасцикла</string>
+    <string name="folder_name">Назив фасцикле</string>
+    <string name="create">Направи</string>
+    <string name="create_failed">Није могуће направити фасциклу</string>
 </resources>

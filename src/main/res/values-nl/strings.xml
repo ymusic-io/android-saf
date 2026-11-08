@@ -5,4 +5,8 @@
     <string name="empty">Geen mappen hier</string>
     <string name="open_settings">Instellingen openen</string>
     <string name="access_message">Geef YMusic Files toegang tot alle bestanden, zodat YMusic de mappen kan gebruiken die je kiest.</string>
+    <string name="new_folder">Nieuwe map</string>
+    <string name="folder_name">Mapnaam</string>
+    <string name="create">Maken</string>
+    <string name="create_failed">Kan de map niet maken</string>
 </resources>

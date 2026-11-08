@@ -5,4 +5,8 @@
     <string name="empty">Aucun dossier ici</string>
     <string name="open_settings">Ouvrir les paramètres</string>
     <string name="access_message">Autorisez YMusic Files à accéder à tous les fichiers pour que YMusic puisse utiliser les dossiers que vous choisissez.</string>
+    <string name="new_folder">Nouveau dossier</string>
+    <string name="folder_name">Nom du dossier</string>
+    <string name="create">Créer</string>
+    <string name="create_failed">Impossible de créer le dossier</string>
 </resources>

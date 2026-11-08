@@ -5,4 +5,8 @@
     <string name="empty">Тут немає папок</string>
     <string name="open_settings">Відкрити налаштування</string>
     <string name="access_message">Дозвольте YMusic Files доступ до всіх файлів, щоб YMusic міг використовувати вибрані вами папки.</string>
+    <string name="new_folder">Нова папка</string>
+    <string name="folder_name">Назва папки</string>
+    <string name="create">Створити</string>
+    <string name="create_failed">Не вдалося створити папку</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Brak folderów</string>
     <string name="open_settings">Otwórz ustawienia</string>
     <string name="access_message">Zezwól aplikacji YMusic Files na dostęp do wszystkich plików, aby YMusic mógł używać wybranych folderów.</string>
+    <string name="new_folder">Nowy folder</string>
+    <string name="folder_name">Nazwa folderu</string>
+    <string name="create">Utwórz</string>
+    <string name="create_failed">Nie udało się utworzyć folderu</string>
 </resources>

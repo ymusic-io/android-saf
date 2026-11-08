@@ -5,4 +5,8 @@
     <string name="empty">இங்கே கோப்புறைகள் இல்லை</string>
     <string name="open_settings">அமைப்புகளைத் திற</string>
     <string name="access_message">நீங்கள் தேர்வுசெய்யும் கோப்புறைகளை YMusic பயன்படுத்த, YMusic Files-க்கு எல்லா கோப்புகளுக்குமான அணுகலை அனுமதிக்கவும்.</string>
+    <string name="new_folder">புதிய கோப்புறை</string>
+    <string name="folder_name">கோப்புறையின் பெயர்</string>
+    <string name="create">உருவாக்கு</string>
+    <string name="create_failed">கோப்புறையை உருவாக்க முடியவில்லை</string>
 </resources>

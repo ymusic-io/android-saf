@@ -5,4 +5,8 @@
     <string name="empty">پوشه‌ای اینجا نیست</string>
     <string name="open_settings">باز کردن تنظیمات</string>
     <string name="access_message">به YMusic Files اجازه دسترسی به همه فایل‌ها را بدهید تا YMusic بتواند از پوشه‌هایی که انتخاب می‌کنید استفاده کند.</string>
+    <string name="new_folder">پوشه جدید</string>
+    <string name="folder_name">نام پوشه</string>
+    <string name="create">ایجاد</string>
+    <string name="create_failed">پوشه ایجاد نشد</string>
 </resources>

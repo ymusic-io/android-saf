@@ -5,4 +5,8 @@
     <string name="empty">ಇಲ್ಲಿ ಯಾವುದೇ ಫೋಲ್ಡರ್‌ಗಳಿಲ್ಲ</string>
     <string name="open_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="access_message">ನೀವು ಆಯ್ಕೆಮಾಡುವ ಫೋಲ್ಡರ್‌ಗಳನ್ನು YMusic ಬಳಸಲು, YMusic Files ಗೆ ಎಲ್ಲಾ ಫೈಲ್‌ಗಳ ಪ್ರವೇಶ ನೀಡಿ.</string>
+    <string name="new_folder">ಹೊಸ ಫೋಲ್ಡರ್</string>
+    <string name="folder_name">ಫೋಲ್ಡರ್ ಹೆಸರು</string>
+    <string name="create">ರಚಿಸಿ</string>
+    <string name="create_failed">ಫೋಲ್ಡರ್ ರಚಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
 </resources>

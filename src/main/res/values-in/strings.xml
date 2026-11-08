@@ -5,4 +5,8 @@
     <string name="empty">Tidak ada folder di sini</string>
     <string name="open_settings">Buka setelan</string>
     <string name="access_message">Izinkan YMusic Files mengakses semua file agar YMusic dapat menggunakan folder yang Anda pilih.</string>
+    <string name="new_folder">Folder baru</string>
+    <string name="folder_name">Nama folder</string>
+    <string name="create">Buat</string>
+    <string name="create_failed">Tidak dapat membuat folder</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Ez dago karpetarik hemen</string>
     <string name="open_settings">Ireki ezarpenak</string>
     <string name="access_message">Eman fitxategi guztietarako sarbidea YMusic Files-i, YMusic-ek zuk aukeratutako karpetak erabil ditzan.</string>
+    <string name="new_folder">Karpeta berria</string>
+    <string name="folder_name">Karpetaren izena</string>
+    <string name="create">Sortu</string>
+    <string name="create_failed">Ezin izan da sortu karpeta</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Aquí no hi ha cap carpeta</string>
     <string name="open_settings">Obre la configuració</string>
     <string name="access_message">Permet que YMusic Files accedeixi a tots els fitxers perquè YMusic pugui fer servir les carpetes que triïs.</string>
+    <string name="new_folder">Carpeta nova</string>
+    <string name="folder_name">Nom de la carpeta</string>
+    <string name="create">Crea</string>
+    <string name="create_failed">No s’ha pogut crear la carpeta</string>
 </resources>

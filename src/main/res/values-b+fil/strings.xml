@@ -5,4 +5,8 @@
     <string name="empty">Walang folder dito</string>
     <string name="open_settings">Buksan ang settings</string>
     <string name="access_message">Payagan ang YMusic Files na i-access ang lahat ng file para magamit ng YMusic ang mga folder na pipiliin mo.</string>
+    <string name="new_folder">Bagong folder</string>
+    <string name="folder_name">Pangalan ng folder</string>
+    <string name="create">Gumawa</string>
+    <string name="create_failed">Hindi magawa ang folder</string>
 </resources>

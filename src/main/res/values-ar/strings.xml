@@ -5,4 +5,8 @@
     <string name="empty">لا توجد مجلدات هنا</string>
     <string name="open_settings">فتح الإعدادات</string>
     <string name="access_message">اسمح لتطبيق YMusic Files بالوصول إلى كل الملفات حتى يتمكن YMusic من استخدام المجلدات التي تختارها.</string>
+    <string name="new_folder">مجلد جديد</string>
+    <string name="folder_name">اسم المجلد</string>
+    <string name="create">إنشاء</string>
+    <string name="create_failed">تعذّر إنشاء المجلد</string>
 </resources>

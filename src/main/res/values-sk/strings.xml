@@ -5,4 +5,8 @@
     <string name="empty">Žiadne priečinky</string>
     <string name="open_settings">Otvoriť nastavenia</string>
     <string name="access_message">Povoľte aplikácii YMusic Files prístup ku všetkým súborom, aby YMusic mohol používať priečinky, ktoré vyberiete.</string>
+    <string name="new_folder">Nový priečinok</string>
+    <string name="folder_name">Názov priečinka</string>
+    <string name="create">Vytvoriť</string>
+    <string name="create_failed">Priečinok sa nepodarilo vytvoriť</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">No hay carpetas aquí</string>
     <string name="open_settings">Abrir ajustes</string>
     <string name="access_message">Permite que YMusic Files acceda a todos los archivos para que YMusic pueda usar las carpetas que elijas.</string>
+    <string name="new_folder">Carpeta nueva</string>
+    <string name="folder_name">Nombre de la carpeta</string>
+    <string name="create">Crear</string>
+    <string name="create_failed">No se pudo crear la carpeta</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="empty">Nenhuma pasta aqui</string>
     <string name="open_settings">Abrir configurações</string>
     <string name="access_message">Permita que o YMusic Files acesse todos os arquivos para que o YMusic possa usar as pastas que você escolher.</string>
+    <string name="new_folder">Nova pasta</string>
+    <string name="folder_name">Nome da pasta</string>
+    <string name="create">Criar</string>
+    <string name="create_failed">Não foi possível criar a pasta</string>
 </resources>

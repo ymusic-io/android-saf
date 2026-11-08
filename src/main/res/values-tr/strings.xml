@@ -5,4 +5,8 @@
     <string name="empty">Burada klasör yok</string>
     <string name="open_settings">Ayarları aç</string>
     <string name="access_message">YMusic\'in seçtiğiniz klasörleri kullanabilmesi için YMusic Files\'a tüm dosyalara erişim izni verin.</string>
+    <string name="new_folder">Yeni klasör</string>
+    <string name="folder_name">Klasör adı</string>
+    <string name="create">Oluştur</string>
+    <string name="create_failed">Klasör oluşturulamadı</string>
 </resources>

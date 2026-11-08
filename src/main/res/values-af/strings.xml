@@ -5,4 +5,8 @@
     <string name="empty">Geen vouers hier nie</string>
     <string name="open_settings">Maak instellings oop</string>
     <string name="access_message">Gee YMusic Files toegang tot alle lêers sodat YMusic die vouers kan gebruik wat jy kies.</string>
+    <string name="new_folder">Nuwe vouer</string>
+    <string name="folder_name">Vouernaam</string>
+    <string name="create">Skep</string>
+    <string name="create_failed">Kon nie die vouer skep nie</string>
 </resources>

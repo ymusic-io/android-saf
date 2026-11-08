@@ -5,4 +5,8 @@
     <string name="empty">Hakuna folda hapa</string>
     <string name="open_settings">Fungua mipangilio</string>
     <string name="access_message">Ruhusu YMusic Files kufikia faili zote ili YMusic iweze kutumia folda unazochagua.</string>
+    <string name="new_folder">Folda mpya</string>
+    <string name="folder_name">Jina la folda</string>
+    <string name="create">Unda</string>
+    <string name="create_failed">Imeshindwa kuunda folda</string>
 </resources>

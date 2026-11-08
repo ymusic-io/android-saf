@@ -5,4 +5,8 @@
     <string name="empty">אין כאן תיקיות</string>
     <string name="open_settings">פתיחת ההגדרות</string>
     <string name="access_message">יש לאפשר ל-YMusic Files גישה לכל הקבצים, כדי ש-YMusic יוכל להשתמש בתיקיות שבחרת.</string>
+    <string name="new_folder">תיקייה חדשה</string>
+    <string name="folder_name">שם התיקייה</string>
+    <string name="create">יצירה</string>
+    <string name="create_failed">לא ניתן ליצור את התיקייה</string>
 </resources>
