@@ -37,9 +37,12 @@ import java.util.Locale;
  */
 public final class PickFolderActivity extends Activity {
     private static final String STATE_DIR = "dir";
+    /** Only a folder this app can write into may be chosen: the caller is picking where to save files. */
+    private static final String EXTRA_WRITABLE = "io.ymusic.android.saf.extra.WRITABLE";
 
     private final List<File> roots = new ArrayList<>();
     private final List<String> rootLabels = new ArrayList<>();
+    private boolean writable;
     /** Null on the volume list. */
     private File current;
     private final List<File> rowTargets = new ArrayList<>();
@@ -63,6 +66,7 @@ public final class PickFolderActivity extends Activity {
             return;
         }
         setTitle(R.string.pick_title);
+        writable = getIntent().getBooleanExtra(EXTRA_WRITABLE, false);
         loadRoots();
         String saved = savedInstanceState != null ? savedInstanceState.getString(STATE_DIR) : null;
         current = saved != null ? new File(saved) : (roots.size() == 1 ? roots.get(0) : null);
@@ -215,7 +219,7 @@ public final class PickFolderActivity extends Activity {
         list.setSelection(0);
         // The clicked row leaves with the listing it was in; on a D-pad focus must land on the new one.
         list.requestFocus();
-        useFolder.setEnabled(dir != null);
+        useFolder.setEnabled(dir != null && (!writable || dir.canWrite()));
         newFolder.setEnabled(dir != null && dir.canWrite());
         // Right from the list goes to the first enabled action: a disabled target would swallow the key.
         Button right = useFolder.isEnabled() ? useFolder : newFolder.isEnabled() ? newFolder : cancel;
@@ -265,7 +269,7 @@ public final class PickFolderActivity extends Activity {
     }
 
     private void pick() {
-        if (current == null) return;
+        if (current == null || (writable && !current.canWrite())) return;
         Uri tree = DocumentsContract.buildTreeDocumentUri(FilesProvider.AUTHORITY, FilesProvider.documentId(current));
         setResult(RESULT_OK, new Intent().setData(tree).addFlags(
             Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION
