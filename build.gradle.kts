@@ -13,8 +13,8 @@ android {
         applicationId = "io.ymusic.android.saf"
         minSdk = 30
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.0.2"
     }
 
     // YMusic's release key, from secrets.properties (./decrypt.sh) or env YMUSIC_ANDROID_*: the picker answers only
